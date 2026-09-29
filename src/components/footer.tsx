@@ -16,9 +16,24 @@ const menuColumns = [
 ];
 
 const badges = [
-  { src: "/footer/badge-store-maker.png", alt: "T Lines Store Maker", left: 27.889 },
-  { src: "/footer/badge-fitout.svg", alt: "T Lines Premium Store Fitout", left: 49.435 },
-  { src: "/footer/badge-design-build.svg", alt: "T Lines Design & Build", left: 70.98 },
+  {
+    src: "/footer/badge-store-maker.png",
+    alt: "T Lines Store Maker",
+    left: 27.889,
+    url: "https://sm.tlines.us",
+  },
+  {
+    src: "/footer/badge-fitout.svg",
+    alt: "T Lines Premium Store Fitout",
+    left: 49.435,
+    url: "https://psf-five.vercel.app/",
+  },
+  {
+    src: "/footer/badge-design-build.svg",
+    alt: "T Lines Design & Build",
+    left: 70.98,
+    url: "https://designbuild-lime.vercel.app/",
+  },
 ];
 
 export default function Footer() {
@@ -43,14 +58,17 @@ export default function Footer() {
 
         {/* brand badges */}
         {badges.map((badge) => (
-          <div
+          <a
             key={badge.src}
-            className="absolute"
+            href={badge.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="absolute transition-opacity hover:opacity-90"
             style={{ left: `${badge.left}%`, top: "11.141%", width: "20.288%", height: "11.141%" }}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={badge.src} alt={badge.alt} className="absolute inset-0 h-full w-full object-contain" />
-          </div>
+          </a>
         ))}
 
         {/* newsletter heading */}

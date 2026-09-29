@@ -46,9 +46,11 @@ export default function Navbar() {
         </Link>
 
         {/* CTA button */}
-        <Link
-          href="#contact"
-          className="absolute"
+        <a
+          href="https://tshop-theta.vercel.app/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute transition-opacity hover:opacity-90"
           style={{
             left: "88.365%",
             top: "17.119%",
@@ -84,7 +86,7 @@ export default function Navbar() {
               Online Store
             </p>
           </div>
-        </Link>
+        </a>
       </div>
     </header>
   );
