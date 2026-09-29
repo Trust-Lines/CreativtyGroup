@@ -58,7 +58,7 @@ function BusinessCard({ business }: { business: Business }) {
       href={business.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="relative block w-full overflow-hidden transition-opacity hover:opacity-90 [container-type:inline-size]"
+      className="relative block w-full overflow-hidden transition-opacity hover:opacity-90 [container-type:inline-size] sm:max-lg:last:col-span-2 sm:max-lg:last:mx-auto sm:max-lg:last:w-[calc(50%-0.5rem)]"
       style={{ aspectRatio: "431 / 759", backgroundColor: business.bgColor }}
     >
       {/* photo */}
@@ -126,7 +126,7 @@ export default function FamilyBusinesses() {
           of businesses
         </SectionTitle>
 
-        <div className="mt-10 grid grid-cols-1 gap-3 sm:mt-14 sm:grid-cols-3 sm:gap-4">
+        <div className="mx-auto mt-10 grid max-w-[431px] grid-cols-1 gap-4 sm:mt-14 sm:max-w-none sm:grid-cols-2 lg:grid-cols-3">
           {businesses.map((business) => (
             <BusinessCard key={business.key} business={business} />
           ))}
