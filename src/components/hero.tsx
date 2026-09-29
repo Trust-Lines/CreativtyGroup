@@ -11,8 +11,7 @@ export default function Hero() {
   return (
     <section className="w-full bg-white px-4 sm:px-6">
       <div
-        className="relative mx-auto w-full max-w-[1441px] overflow-hidden bg-[#474747]"
-        style={{ aspectRatio: "1440 / 918" }}
+        className="relative mx-auto aspect-[4/5] w-full max-w-[1441px] overflow-hidden bg-[#474747] sm:aspect-[4/3] lg:aspect-[1440/918]"
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
