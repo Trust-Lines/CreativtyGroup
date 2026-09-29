@@ -23,7 +23,10 @@ const businesses: Business[] = [
     brand: "/family/brand-store-maker.svg",
     brandRatio: 244 / 64,
     logo: { left: 21.81, top: 55.2, width: 56.61, height: 8.43 },
-    captionLines: ["Get 5% off all your projects discussed with our team at the booth."],
+    captionLines: [
+      "Complete solutions for convenience retail.",
+      "Specialized in C-Stores, Truck Stops, and Grocery Markets.",
+    ],
     url: "https://sm.tlines.us",
   },
   {
@@ -35,7 +38,10 @@ const businesses: Business[] = [
     brand: "/family/brand-fitouts.svg",
     brandRatio: 239 / 68,
     logo: { left: 22.27, top: 54.94, width: 55.45, height: 8.96 },
-    captionLines: ["Bring your project,", "Start with a complimentary initial store design."],
+    captionLines: [
+      "Crafted for premium retail.",
+      "Custom interior fit-outs for jewelry stores, luxury brands, boutiques, and high-end retail spaces.",
+    ],
     url: "https://psf-five.vercel.app/",
   },
   {
@@ -47,7 +53,10 @@ const businesses: Business[] = [
     brand: "/family/brand-design-build.svg",
     brandRatio: 216 / 60,
     logo: { left: 25.06, top: 55.47, width: 50.12, height: 7.91 },
-    captionLines: ["Pick up your special gift at our booth while the supply lasts."],
+    captionLines: [
+      "Built for commercial spaces.",
+      "End-to-end solutions for hotels, restaurants, cafés, offices, healthcare, and educational spaces.",
+    ],
     url: "https://designbuild-lime.vercel.app/",
   },
 ];
