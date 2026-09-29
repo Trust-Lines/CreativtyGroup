@@ -10,6 +10,7 @@ type Business = {
   brandRatio: number;
   logo: { left: number; top: number; width: number; height: number };
   captionLines: string[];
+  url: string;
 };
 
 const businesses: Business[] = [
@@ -23,6 +24,7 @@ const businesses: Business[] = [
     brandRatio: 244 / 64,
     logo: { left: 21.81, top: 55.2, width: 56.61, height: 8.43 },
     captionLines: ["Get 5% off all your projects discussed with our team at the booth."],
+    url: "https://sm.tlines.us",
   },
   {
     key: "fitouts",
@@ -34,6 +36,7 @@ const businesses: Business[] = [
     brandRatio: 239 / 68,
     logo: { left: 22.27, top: 54.94, width: 55.45, height: 8.96 },
     captionLines: ["Bring your project,", "Start with a complimentary initial store design."],
+    url: "https://psf-five.vercel.app/",
   },
   {
     key: "design-build",
@@ -45,13 +48,17 @@ const businesses: Business[] = [
     brandRatio: 216 / 60,
     logo: { left: 25.06, top: 55.47, width: 50.12, height: 7.91 },
     captionLines: ["Pick up your special gift at our booth while the supply lasts."],
+    url: "https://designbuild-lime.vercel.app/",
   },
 ];
 
 function BusinessCard({ business }: { business: Business }) {
   return (
-    <div
-      className="relative w-full overflow-hidden [container-type:inline-size]"
+    <a
+      href={business.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="relative block w-full overflow-hidden transition-opacity hover:opacity-90 [container-type:inline-size]"
       style={{ aspectRatio: "431 / 759", backgroundColor: business.bgColor }}
     >
       {/* photo */}
@@ -105,7 +112,7 @@ function BusinessCard({ business }: { business: Business }) {
           <p key={line}>{line}</p>
         ))}
       </div>
-    </div>
+    </a>
   );
 }
 
