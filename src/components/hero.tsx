@@ -3,15 +3,15 @@ const overlaySvg =
   "<rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='0.7'/>" +
   "<defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' " +
   "gradientTransform='matrix(0.099998 53.9 -84.549 0.15686 291 491)'>" +
-  "<stop stop-color='rgba(25,25,25,1)' offset='0.18619'/>" +
-  "<stop stop-color='rgba(25,25,25,0)' offset='0.6332'/>" +
+  "<stop stop-color='rgba(71,71,71,1)' offset='0.18619'/>" +
+  "<stop stop-color='rgba(71,71,71,0)' offset='0.6332'/>" +
   "</radialGradient></defs></svg>";
 
 export default function Hero() {
   return (
     <section className="w-full bg-white px-4 sm:px-6">
       <div
-        className="relative mx-auto w-full max-w-[1441px] overflow-hidden bg-[#191919]"
+        className="relative mx-auto w-full max-w-[1441px] overflow-hidden bg-[#474747]"
         style={{ aspectRatio: "1440 / 918" }}
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -23,7 +23,7 @@ export default function Hero() {
         <div
           className="pointer-events-none absolute inset-0"
           style={{
-            backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(overlaySvg)}"), linear-gradient(180deg, rgb(25, 25, 25) 11.662%, rgba(25, 25, 25, 0) 25.892%)`,
+            backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(overlaySvg)}"), linear-gradient(180deg, rgb(71, 71, 71) 11.662%, rgba(71, 71, 71, 0) 25.892%)`,
             backgroundSize: "100% 100%",
           }}
         />

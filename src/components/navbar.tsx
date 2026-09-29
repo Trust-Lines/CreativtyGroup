@@ -6,7 +6,7 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 flex justify-center px-4 sm:px-6">
       <div
         className="relative w-full max-w-[1441px] [container-type:inline-size]"
-        style={{ aspectRatio: "1441 / 176.3556" }}
+        style={{ aspectRatio: "1392.5 / 127.5738" }}
       >
         {/* decorative background */}
         <div className="absolute inset-0 -z-10 overflow-hidden" aria-hidden="true">
@@ -21,7 +21,7 @@ export default function Navbar() {
             src="/navbar/bg-outer.svg"
             alt=""
             className="absolute inset-x-0 w-full object-fill"
-            style={{ top: "56.7057%", height: "43.0369%" }}
+            style={{ top: "48.207%", height: "51.454%" }}
           />
         </div>
 
@@ -30,10 +30,10 @@ export default function Navbar() {
           href="/"
           className="absolute"
           style={{
-            left: "7.8071%",
-            top: "18.1462%",
-            width: "10.9646%",
-            height: "53.8681%",
+            left: "9.3868%",
+            top: "17.137%",
+            width: "8.669%",
+            height: "56.878%",
           }}
         >
           <Image
@@ -48,34 +48,42 @@ export default function Navbar() {
         {/* CTA button */}
         <Link
           href="#contact"
-          className="absolute flex items-center rounded-full bg-[#c14040] transition-colors hover:bg-[#a83636]"
+          className="absolute"
           style={{
-            left: "83.1714%",
-            top: "18.7127%",
-            width: "14.3650%",
-            height: "28.3512%",
-            paddingLeft: "0.48577cqw",
-            paddingRight: "0.97155cqw",
-            gap: "1.04094cqw",
+            left: "88.365%",
+            top: "17.119%",
+            width: "9.5789%",
+            height: "27.773%",
           }}
         >
-          <span
-            className="relative block shrink-0"
-            style={{ width: "2.84525cqw", height: "2.77585cqw" }}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/navbar/cta-button.svg"
+            alt=""
+            className="absolute inset-0 h-full w-full object-fill"
+          />
+          <div
+            className="absolute flex flex-col justify-center text-white"
+            style={{
+              left: "34.735%",
+              top: "17.925%",
+              width: "52.475%",
+              height: "70.567%",
+            }}
           >
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/navbar/cta-icon.svg"
-              alt=""
-              className="absolute inset-0 h-full w-full object-contain"
-            />
-          </span>
-          <span
-            className="whitespace-nowrap font-bold text-white tracking-[0.02em]"
-            style={{ fontSize: "clamp(11px, 1.1797cqw, 17px)" }}
-          >
-            Fit Your Store
-          </span>
+            <p
+              className="font-semibold leading-[1.1] tracking-[0.02em]"
+              style={{ fontSize: "clamp(10px, 1.3645cqw, 19px)" }}
+            >
+              T Shop
+            </p>
+            <p
+              className="font-normal leading-[1.1] tracking-[-0.02em]"
+              style={{ fontSize: "clamp(7px, 0.7899cqw, 11px)" }}
+            >
+              Online Store
+            </p>
+          </div>
         </Link>
       </div>
     </header>

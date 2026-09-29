@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const menuColumns = [
@@ -16,141 +15,183 @@ const menuColumns = [
   },
 ];
 
+const badges = [
+  { src: "/footer/badge-store-maker.png", alt: "T Lines Store Maker", left: 27.889 },
+  { src: "/footer/badge-fitout.svg", alt: "T Lines Premium Store Fitout", left: 49.435 },
+  { src: "/footer/badge-design-build.svg", alt: "T Lines Design & Build", left: 70.98 },
+];
+
 export default function Footer() {
   return (
     <footer className="w-full bg-white px-4 sm:px-6">
-      <div className="mx-auto max-w-[1441px] bg-[#1a1a1a] px-4 py-12 text-white sm:px-6 sm:py-16 lg:px-10 lg:py-20">
-        {/* logo + brand badges */}
-        <div className="flex flex-wrap items-start justify-between gap-8">
-          <div className="relative h-[70px] w-[117px] shrink-0 sm:h-[90px] sm:w-[150px] lg:h-[110px] lg:w-[183px]">
-            <Image
-              src="/footer/logo.png"
-              alt="Tlines Creativity Group"
-              fill
-              className="object-contain object-left"
-            />
-          </div>
-
-          <div className="flex flex-wrap items-center gap-4">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/footer/badge-store-maker.png"
-              alt="T Lines Store Maker"
-              className="h-[62px] w-auto sm:h-[81px]"
-            />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/footer/badge-fitout.svg"
-              alt="T Lines Premium Store Fitout"
-              className="h-[62px] w-auto sm:h-[81px]"
-            />
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/footer/badge-design-build.svg"
-              alt="T Lines Design & Build"
-              className="h-[62px] w-auto sm:h-[81px]"
-            />
-          </div>
+      <div
+        className="relative mx-auto w-full max-w-[1441px] overflow-hidden bg-[#474747] text-white [container-type:inline-size]"
+        style={{ aspectRatio: "1592 / 727" }}
+      >
+        {/* logo */}
+        <div
+          className="absolute"
+          style={{ left: "8.668%", top: "8.666%", width: "11.495%", height: "15.13%" }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/footer/logo.png"
+            alt="Tlines Creativity Group"
+            className="absolute inset-0 h-full w-full object-contain object-left"
+          />
         </div>
 
-        {/* newsletter + menu columns */}
-        <div className="mt-16 grid grid-cols-1 gap-12 lg:grid-cols-[1fr_auto] lg:gap-20">
-          <div className="max-w-md">
-            <h2 className="text-[32px] font-medium leading-[1.15] sm:text-[40px]">
-              Subscribe to
-              <br />
-              our <span className="font-semibold">Newsletter</span>.
-            </h2>
-
-            <form className="mt-8 flex w-full max-w-[320px] items-center justify-between rounded-lg border border-white py-3 pl-4 pr-[18px]">
-              <span className="text-base font-medium text-white">
-                Submit your email
-              </span>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/footer/arrow-email.svg"
-                alt=""
-                className="h-[23px] w-[23px]"
-              />
-            </form>
-
-            <div className="mt-10">
-              <p className="text-[18px] uppercase text-white/70">
-                Follow us on
-              </p>
-              <div className="mt-4 flex items-center gap-[10px]">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/footer/social-1.svg"
-                  alt="Instagram"
-                  className="size-[49px]"
-                />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/footer/social-2.svg"
-                  alt="YouTube"
-                  className="size-[49px]"
-                />
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="/footer/social-3.svg"
-                  alt="LinkedIn"
-                  className="size-[49px]"
-                />
-              </div>
-            </div>
+        {/* brand badges */}
+        {badges.map((badge) => (
+          <div
+            key={badge.src}
+            className="absolute"
+            style={{ left: `${badge.left}%`, top: "11.141%", width: "20.288%", height: "11.141%" }}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={badge.src} alt={badge.alt} className="absolute inset-0 h-full w-full object-contain" />
           </div>
+        ))}
 
-          <div className="grid grid-cols-2 gap-x-10 gap-y-12 sm:grid-cols-3 lg:flex lg:gap-[90px]">
-            {menuColumns.map((column) => (
-              <div key={column.label} className="flex flex-col gap-4">
-                <p className="text-[18px] uppercase text-white/70">
-                  {column.label}
-                </p>
-                <ul className="flex flex-col gap-[13px] text-[22px] font-semibold">
-                  {column.links.map((link) => (
-                    <li key={link}>
-                      <Link href="#" className="hover:text-white/80">
-                        {link}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+        {/* newsletter heading */}
+        <h2
+          className="absolute font-medium leading-[1.25]"
+          style={{ left: "8.668%", top: "34.251%", fontSize: "clamp(20px, 2.5126cqw, 40px)" }}
+        >
+          Subscribe to
+          <br />
+          our <span className="font-semibold">Newsletter</span>.
+        </h2>
+
+        {/* email form */}
+        <form
+          className="absolute flex items-center justify-between rounded-lg border border-white"
+          style={{
+            left: "8.668%",
+            top: "53.096%",
+            width: "20.101%",
+            height: "6.603%",
+            paddingLeft: "1.0050cqw",
+            paddingRight: "1.1307cqw",
+          }}
+        >
+          <span
+            className="whitespace-nowrap font-medium text-white"
+            style={{ fontSize: "clamp(12px, 1.0050cqw, 16px)" }}
+          >
+            Submit your email
+          </span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/footer/arrow-email.svg"
+            alt=""
+            style={{ width: "1.4447cqw", height: "1.4447cqw" }}
+          />
+        </form>
+
+        {/* follow us on */}
+        <div className="absolute" style={{ left: "8.668%", top: "68.226%" }}>
+          <p
+            className="uppercase text-white/70"
+            style={{ fontSize: "clamp(12px, 1.1307cqw, 18px)" }}
+          >
+            Follow us on
+          </p>
+          <div className="mt-4 flex items-center" style={{ gap: "0.6281cqw" }}>
+            {["social-1", "social-2", "social-3"].map((name, i) => (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                key={name}
+                src={`/footer/${name}.svg`}
+                alt={["Instagram", "YouTube", "LinkedIn"][i]}
+                style={{ width: "3.0779cqw", height: "3.0779cqw" }}
+              />
             ))}
           </div>
         </div>
 
+        {/* menu columns */}
+        <div
+          className="absolute flex items-start justify-end"
+          style={{ right: "8.731%", top: "35.626%", gap: "5.6533cqw" }}
+        >
+          {menuColumns.map((column) => (
+            <div key={column.label} className="flex flex-col" style={{ gap: "1.0050cqw" }}>
+              <p
+                className="whitespace-nowrap uppercase text-white/70"
+                style={{ fontSize: "clamp(12px, 1.1307cqw, 18px)" }}
+              >
+                {column.label}
+              </p>
+              <ul className="flex flex-col font-semibold" style={{ gap: "0.8166cqw" }}>
+                {column.links.map((link) => (
+                  <li key={link} className="whitespace-nowrap" style={{ fontSize: "clamp(14px, 1.3819cqw, 22px)" }}>
+                    <Link href="#" className="hover:text-white/80">
+                      {link}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
         {/* locations / call us */}
-        <div className="mt-16 flex flex-wrap gap-12 lg:justify-end">
-          <div className="flex flex-col items-start gap-6">
-            <p className="text-[18px] uppercase text-white/70">Locations</p>
+        <div
+          className="absolute flex items-start justify-between"
+          style={{ left: "56.283%", top: "70.014%", width: "34.987%" }}
+        >
+          <div className="flex flex-col" style={{ gap: "1.5075cqw" }}>
+            <p
+              className="whitespace-nowrap uppercase text-white/70"
+              style={{ fontSize: "clamp(12px, 1.1307cqw, 18px)" }}
+            >
+              Locations
+            </p>
             <Link
               href="#"
-              className="flex items-center gap-[5px] text-[22px] font-semibold underline decoration-solid underline-offset-2"
+              className="flex items-center whitespace-nowrap font-semibold underline decoration-solid underline-offset-2"
+              style={{ fontSize: "clamp(14px, 1.3819cqw, 22px)", gap: "0.3141cqw" }}
             >
               Atalanta, Georgia (GA)
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src="/footer/arrow-location.svg"
                 alt=""
-                className="size-[23px]"
+                style={{ width: "1.4447cqw", height: "1.4447cqw" }}
               />
             </Link>
           </div>
-          <div className="flex flex-col items-start gap-6">
-            <p className="text-[18px] uppercase text-white/70">Call us</p>
-            <a href="tel:8006603772" className="text-[22px] font-semibold">
+          <div className="flex flex-col" style={{ gap: "1.5075cqw" }}>
+            <p
+              className="whitespace-nowrap uppercase text-white/70"
+              style={{ fontSize: "clamp(12px, 1.1307cqw, 18px)" }}
+            >
+              Call us
+            </p>
+            <a
+              href="tel:8006603772"
+              className="whitespace-nowrap font-semibold"
+              style={{ fontSize: "clamp(14px, 1.3819cqw, 22px)" }}
+            >
               800-660-3772
             </a>
           </div>
         </div>
 
         {/* copyright */}
-        <div className="mt-16 flex flex-col gap-2 text-[18px] text-white/30 sm:flex-row sm:justify-between">
-          <p>All rights are reserved for TLines 2026</p>
-          <p>All rights are reserved for TLines 2026</p>
-        </div>
+        <p
+          className="absolute text-white/30"
+          style={{ left: "8.668%", top: "93.397%", width: "26.759%", fontSize: "clamp(11px, 1.1307cqw, 18px)" }}
+        >
+          All rights are reserved for TLines 2026
+        </p>
+        <p
+          className="absolute text-right text-white/30"
+          style={{ right: "8.731%", top: "93.397%", width: "27.45%", fontSize: "clamp(11px, 1.1307cqw, 18px)" }}
+        >
+          All rights are reserved for TLines 2026
+        </p>
       </div>
     </footer>
   );
