@@ -109,7 +109,7 @@ function BusinessCard({ business }: { business: Business }) {
 
       {/* caption */}
       <div
-        className="absolute text-justify font-normal leading-[1.25] text-white"
+        className="absolute text-left font-normal leading-[1.25] text-white"
         style={{
           left: "11.83%",
           top: "69.43%",
