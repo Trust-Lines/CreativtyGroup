@@ -1,5 +1,4 @@
-const videoSrc =
-  "https://ik.imagekit.io/w6ym9axpg/tr:w-1920,q-60,f-auto,ac-none/Creativty%20Group/Web%20Video.mp4";
+const videoSrc = "/hero/web-video.mp4";
 
 export default function Hero() {
   return (
