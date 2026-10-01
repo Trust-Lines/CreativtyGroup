@@ -1,39 +1,21 @@
-const overlaySvg =
-  "<svg viewBox='0 0 1440 918' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'>" +
-  "<rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='0.7'/>" +
-  "<defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' " +
-  "gradientTransform='matrix(0.099998 53.9 -84.549 0.15686 291 491)'>" +
-  "<stop stop-color='rgba(71,71,71,1)' offset='0.18619'/>" +
-  "<stop stop-color='rgba(71,71,71,0)' offset='0.6332'/>" +
-  "</radialGradient></defs></svg>";
+const videoSrc =
+  "https://ik.imagekit.io/w6ym9axpg/tr:w-1920,q-60,f-auto,ac-none/Creativty%20Group/Web%20Video.mp4";
 
 export default function Hero() {
   return (
     <section className="w-full bg-white px-4 sm:px-6">
-      <div
-        className="relative mx-auto aspect-[4/5] w-full max-w-[1441px] overflow-hidden bg-[#474747] sm:aspect-[4/3] lg:aspect-[1440/918]"
-      >
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/hero/bg.png"
-          alt="Tlines mağaza içi tasarım çözümleri"
+      <div className="relative mx-auto aspect-[4/5] w-full max-w-[1441px] overflow-hidden bg-[#474747] sm:aspect-[4/3] lg:aspect-[1440/918]">
+        <video
           className="absolute inset-0 h-full w-full object-cover"
-        />
-        <div
-          className="pointer-events-none absolute inset-0"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(overlaySvg)}"), linear-gradient(180deg, rgb(71, 71, 71) 11.662%, rgba(71, 71, 71, 0) 25.892%)`,
-            backgroundSize: "100% 100%",
-          }}
-        />
-
-        <div className="relative flex h-full items-end p-6 sm:p-10 lg:p-14">
-          <h1 className="text-[32px] font-medium uppercase leading-[1.08] tracking-[-0.03em] text-white sm:text-[44px] lg:text-[60px]">
-            Solutions
-            <br />
-            we offer..
-          </h1>
-        </div>
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          aria-label="Tlines mağaza içi tasarım çözümleri"
+        >
+          <source src={videoSrc} type="video/mp4" />
+        </video>
       </div>
     </section>
   );
