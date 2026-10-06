@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import ScreenFit from "@/components/screen-fit";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         className="min-h-full flex flex-col font-sans"
         suppressHydrationWarning
       >
+        <ScreenFit />
         <Navbar />
         {children}
         <Footer />

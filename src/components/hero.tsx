@@ -18,7 +18,7 @@ export default function Hero() {
 
   return (
     <section className="w-full bg-white sm:px-6">
-      <div className="relative mx-auto aspect-[9/16] w-full max-w-[1441px] overflow-hidden sm:max-w-[min(1441px,calc(100svh*4/3))] lg:max-w-[min(1441px,calc(100svh*1440/918))] bg-[#474747] sm:aspect-[4/3] lg:aspect-[1440/918]">
+      <div className="relative mx-auto aspect-[9/16] w-full max-w-[1441px] overflow-hidden bg-[#474747] sm:aspect-[4/3] lg:aspect-[1440/918]">
         {src && (
           <video
             key={src}
