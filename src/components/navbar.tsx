@@ -22,7 +22,7 @@ export default function Navbar() {
           style={{ height: u(133) }}
         >
           <div
-            className="absolute inset-x-0 top-0 bg-[#474747]"
+            className="absolute inset-x-0 top-0 bg-[#1A1A1A]"
             style={{ height: u(82) }}
             aria-hidden="true"
           />
